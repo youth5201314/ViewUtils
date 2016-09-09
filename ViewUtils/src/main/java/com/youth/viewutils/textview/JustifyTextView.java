@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.youth.viewutils.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * TextView换行对齐控件
  */
@@ -37,12 +40,14 @@ public class JustifyTextView extends TextView {
         lineSpacing = a.getDimension(R.styleable.JustifyTextView_lineSpacing, 0);
         a.recycle();
         mPaint = this.getPaint();
-        // 获取文本颜色设置给画笔
+        /**
+         * Gets the text color set to the brush
+         */
         mPaint.setColor(this.getCurrentTextColor());
     }
 
     /**
-     * 单词单元数组,主要针对英文
+     * Word unit array, mainly for English
      */
     private String[] words;
 
@@ -88,7 +93,7 @@ public class JustifyTextView extends TextView {
     }
 
     /**
-     * @return lines-int 重新排版后文档的行数
+     * @return lines-int Number of rows in the document after re layout
      */
     private int getLines() {
         float linewidth = 0;
@@ -107,7 +112,7 @@ public class JustifyTextView extends TextView {
                 if (String.valueOf(words[i]).equals("\n")) {
                     linewidth = textWidth;
                 }
-                if (mPaint.measureText(words[i]) != mPaint.measureText("中")) {
+                if (!isContainChinese(words[i])) {
                     linewidth += (measureText + blankwidth);
                 } else {
                     linewidth += measureText;
@@ -131,16 +136,16 @@ public class JustifyTextView extends TextView {
                 float widthPoint = 0;
                 for (int k = point; k < i; k++) {
                     if (!String.valueOf(words[k]).equals("\n")) {
-                        //逐行逐个绘制单词word
+                        //Line by line by drawing the word
                         canvas.drawText(words[k],
                                 widthPoint + getPaddingLeft(),
-                                (float) (mFontHeight + lineSpacing)* (line + 1),
+                                (float) (mFontHeight + lineSpacing) * (line + 1),
                                 mPaint);
                     }
                     widthPoint = widthPoint + mPaint.measureText(words[k])
                             + ((textWidth - linewidth) / (i - point - 1));
-                    // 如果不是中文,增加一个空格
-                    if (mPaint.measureText(words[k]) != mPaint.measureText("中")) {
+                    // If it is not Chinese, add a space
+                    if (!isContainChinese(words[k])) {
                         widthPoint += blankwidth;
                     }
                 }
@@ -149,12 +154,12 @@ public class JustifyTextView extends TextView {
                 linewidth = 0;
                 widthPoint = 0;
                 i--;
-            } else { // 逐个单词累计,长度够一行绘制一次or换行
+            } else { // One by one word length line accumulated enough draw a or line
                 if (String.valueOf(words[i]).equals("\n")) {
                     linewidth = textWidth;
                 }
-                // 英文每个单词后面有一个空格
-                if (mPaint.measureText(words[i]) != mPaint.measureText("中")) {
+                // There is a space behind each word in the English language.
+                if (!isContainChinese(words[i])) {
                     linewidth += (measureText + blankwidth);
                 } else {
                     linewidth += measureText;
@@ -167,15 +172,24 @@ public class JustifyTextView extends TextView {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mText = (String) this.getText();
-        // 此处得到的是TextView的宽度;高度需重新计算
+        // The width of TextView is obtained here; the height needs to be re calculated.
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
-        // 减去左右文本边距的文本区域宽度
+        // The width of the text area minus about text margin
         textWidth = widthSize - getPaddingLeft() - getPaddingRight();
         arrayTowords();
 
         Paint.FontMetricsInt fontMetricsInt = mPaint.getFontMetricsInt();
         mFontHeight = fontMetricsInt.bottom - fontMetricsInt.top;
-        textHeight = (int) (getLines() * (mFontHeight + lineSpacing))+getPaddingBottom()+getPaddingTop();
+        textHeight = (int) (getLines() * (mFontHeight + lineSpacing)) + getPaddingBottom() + getPaddingTop();
         setMeasuredDimension(widthSize, textHeight);
+    }
+
+    public static boolean isContainChinese(String str) {
+        Pattern p = Pattern.compile("[u4e00-u9fa5]");
+        Matcher m = p.matcher(str);
+        if (m.find()) {
+            return true;
+        }
+        return false;
     }
 }
