@@ -9,7 +9,7 @@
 ##Gradle
 ```groovy
 dependencies{
-    compile 'com.youth.ViewUtils:ViewUtils:0.0.2'
+    compile 'com.youth.viewutils:ViewUtils:0.0.1'
 }
 ```
 
