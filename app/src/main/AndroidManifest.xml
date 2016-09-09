@@ -18,7 +18,7 @@
         <activity android:name="com.youth.viewutils.test.TextViewExpandableActivity" />
         <activity android:name="com.youth.viewutils.test.TextViewStyleActivity" />
         <activity android:name="com.youth.viewutils.test.JustifyTextViewActivity" />
-        <activity android:name="com.youth.viewutils.test.DrawableTextViewActivity"></activity>
+        <activity android:name=".CenterDrawableTextViewActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.youth.viewutils.view;
+package com.youth.viewutils.textview;
 
 import android.content.Context;
 import android.content.res.ColorStateList;

@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="JustifyTextView效果："
         android:layout_marginTop="20dp"/>
-    <com.youth.viewutils.view.JustifyTextView
+    <com.youth.viewutils.textview.JustifyTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/gray_light"

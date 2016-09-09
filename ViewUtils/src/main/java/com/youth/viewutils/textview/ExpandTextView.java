@@ -1,4 +1,4 @@
-package com.youth.viewutils.view;
+package com.youth.viewutils.textview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

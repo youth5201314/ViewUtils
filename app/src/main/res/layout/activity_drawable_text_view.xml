@@ -9,6 +9,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="这里只展示TextView自定义控件的效果\nButton、CompoundButton、RadioButton的用法相同，只是类名不一样而已"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/orange"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="原始效果：\n当我们我想做个有钱人android:gravity=‘center’让内容居中时发现只是文字居中，图标没有动"/>
     <TextView
         android:layout_width="match_parent"
@@ -33,9 +39,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DrawableTextView效果：\n去掉android:gravity=‘center’属性"
+        android:text="CenterDrawableTextView效果：\n去掉android:gravity=‘center’属性"
         android:layout_marginTop="20dp"/>
-    <com.youth.viewutils.view.DrawableTextView
+    <com.youth.viewutils.textview.CenterDrawableTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/gray_light"
@@ -44,7 +50,7 @@
         android:textColor="#FE7171"
         android:drawableLeft="@mipmap/icon_red_money"
         android:text="我想做个有钱人"/>
-    <com.youth.viewutils.view.DrawableTextView
+    <com.youth.viewutils.textview.CenterDrawableTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/gray_light"

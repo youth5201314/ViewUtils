@@ -1,4 +1,4 @@
-package com.youth.viewutils.view;
+package com.youth.viewutils.textview;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -13,21 +13,21 @@ import com.youth.viewutils.utils.CenterDrawableHelper;
  * 1、解决setdrawableLeft等 drawable不能居中问题
  * 2、解决setdrawableLeft等 drawable不能点击问题
  */
-public class DrawableTextView extends TextView {
+public class CenterDrawableTextView extends TextView {
 
-    public DrawableTextView(Context context) {
+    public CenterDrawableTextView(Context context) {
         super(context);
     }
 
-    public DrawableTextView(Context context, AttributeSet attrs) {
+    public CenterDrawableTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public DrawableTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CenterDrawableTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public DrawableTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public CenterDrawableTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 

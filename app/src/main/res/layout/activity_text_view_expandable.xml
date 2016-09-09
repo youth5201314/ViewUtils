@@ -14,7 +14,7 @@
         android:padding="10dp"
         android:text="----默认用法----" />
 
-    <com.youth.viewutils.view.ExpandTextView
+    <com.youth.viewutils.textview.ExpandTextView
         android:id="@+id/tv_expand1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:padding="10dp"
         android:text="----自定义用法----" />
 
-    <com.youth.viewutils.view.ExpandTextView
+    <com.youth.viewutils.textview.ExpandTextView
         android:id="@+id/tv_expand2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         .putExtra("des", des[i]));
                 break;
             case 3:
-                startActivity(new Intent(this, DrawableTextViewActivity.class)
+                startActivity(new Intent(this, CenterDrawableTextViewActivity.class)
                         .putExtra("des", des[i]));
                 break;
         }

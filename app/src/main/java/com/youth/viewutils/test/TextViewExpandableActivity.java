@@ -2,7 +2,7 @@ package com.youth.viewutils.test;
 
 import android.os.Bundle;
 
-import com.youth.viewutils.view.ExpandTextView;
+import com.youth.viewutils.textview.ExpandTextView;
 
 public class TextViewExpandableActivity extends BaseActivity {
 
