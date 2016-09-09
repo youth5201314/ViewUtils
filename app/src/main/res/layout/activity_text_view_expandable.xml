@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="----默认用法----" />
+
+    <com.youth.viewutils.view.ExpandTextView
+        android:id="@+id/tv_expand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="----自定义用法----" />
+
+    <com.youth.viewutils.view.ExpandTextView
+        android:id="@+id/tv_expand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:etv_expandDrawable="@mipmap/icon_green_arrow_down"
+        app:etv_lines="5"
+        app:etv_shrinkDrawable="@mipmap/icon_green_arrow_up"
+        app:etv_textContentColor="@color/main"
+        app:etv_textContentSize="15sp"
+        app:etv_textExpand="展开"
+        app:etv_textShrink="收起"
+        app:etv_textStateColor="@color/main"
+        app:etv_textStateSize="13sp" />
+
+</LinearLayout>

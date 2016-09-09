@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandTextView">
+        <attr name="etv_lines" format="integer" />
+        <attr name="etv_shrinkDrawable" format="reference" />
+        <attr name="etv_expandDrawable" format="reference" />
+        <attr name="etv_textStateColor" format="color" />
+        <attr name="etv_textStateSize" format="dimension" />
+        <attr name="etv_textContentColor" format="color" />
+        <attr name="etv_textContentSize" format="dimension" />
+        <attr name="etv_textShrink" format="string" />
+        <attr name="etv_textExpand" format="string" />
+    </declare-styleable>
+    <declare-styleable name="TextViewStyle">
+        <attr name="tvs_backgroundColor" format="color|reference" />
+        <attr name="tvs_backgroundRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="JustifyTextView">
+        <attr name="lineSpacing" format="dimension" />
+    </declare-styleable>
+</resources>

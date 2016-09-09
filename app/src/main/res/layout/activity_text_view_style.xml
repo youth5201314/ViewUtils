@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+    <com.youth.viewutils.view.TextViewStyle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高大上"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:layout_marginLeft="10dp"
+        app:tvs_backgroundColor="@color/pink"/>
+
+    <com.youth.viewutils.view.TextViewStyle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高大上"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:layout_marginLeft="10dp"
+        app:tvs_backgroundColor="@color/main"
+        app:tvs_backgroundRadius="4dp" />
+
+    <com.youth.viewutils.view.TextViewStyle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高大上"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        app:tvs_backgroundColor="@color/gold"
+        app:tvs_backgroundRadius="4dp" />
+    <com.youth.viewutils.view.TextViewStyle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高大上"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        app:tvs_backgroundColor="@color/light_blue"
+        app:tvs_backgroundRadius="8dp" />
+    <com.youth.viewutils.view.TextViewStyle
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高大上"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginLeft="10dp"
+        app:tvs_backgroundColor="@color/green_yellow"
+        app:tvs_backgroundRadius="14dp" />
+</LinearLayout>
