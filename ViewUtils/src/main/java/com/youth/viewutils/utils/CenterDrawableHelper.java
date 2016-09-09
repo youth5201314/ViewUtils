@@ -8,11 +8,14 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 public final class CenterDrawableHelper {
+    final int DRAWABLE_LEFT = 0;
+    final int DRAWABLE_TOP = 1;
+    final int DRAWABLE_RIGHT = 2;
+    final int DRAWABLE_BOTTOM = 3;
     private static void onCenterDraw(TextView view, Canvas canvas, Drawable drawable, int gravity) {
         int drawablePadding = view.getCompoundDrawablePadding();
         int ratio = 1;
         float total;
-
         switch (gravity) {
             case Gravity.RIGHT:
                 ratio = -1;
@@ -33,18 +36,18 @@ public final class CenterDrawableHelper {
     public static void preDraw(TextView view, Canvas canvas) {
         Drawable[] drawables = view.getCompoundDrawables();
         if (drawables != null) {
-            if (drawables[0] != null) {
+            if (drawables[DRAWABLE_LEFT] != null) {
                 view.setGravity(Gravity.CENTER_VERTICAL | Gravity.LEFT);
-                onCenterDraw(view, canvas, drawables[0], Gravity.LEFT);
-            } else if (drawables[1] != null) {
+                onCenterDraw(view, canvas, drawables[DRAWABLE_LEFT], Gravity.LEFT);
+            } else if (drawables[DRAWABLE_TOP] != null) {
                 view.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
-                onCenterDraw(view, canvas, drawables[1], Gravity.TOP);
-            } else if (drawables[2] != null) {
+                onCenterDraw(view, canvas, drawables[DRAWABLE_TOP], Gravity.TOP);
+            } else if (drawables[DRAWABLE_RIGHT] != null) {
                 view.setGravity(Gravity.CENTER_VERTICAL | Gravity.RIGHT);
-                onCenterDraw(view, canvas, drawables[2], Gravity.RIGHT);
-            } else if (drawables[3] != null) {
+                onCenterDraw(view, canvas, drawables[DRAWABLE_RIGHT], Gravity.RIGHT);
+            } else if (drawables[DRAWABLE_BOTTOM] != null) {
                 view.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
-                onCenterDraw(view, canvas, drawables[3], Gravity.BOTTOM);
+                onCenterDraw(view, canvas, drawables[DRAWABLE_BOTTOM], Gravity.BOTTOM);
             }
         }
     }
