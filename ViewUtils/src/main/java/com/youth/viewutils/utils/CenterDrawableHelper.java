@@ -8,10 +8,10 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 public final class CenterDrawableHelper {
-    final int DRAWABLE_LEFT = 0;
-    final int DRAWABLE_TOP = 1;
-    final int DRAWABLE_RIGHT = 2;
-    final int DRAWABLE_BOTTOM = 3;
+    static final int DRAWABLE_LEFT = 0;
+    static final int DRAWABLE_TOP = 1;
+    static final int DRAWABLE_RIGHT = 2;
+    static final int DRAWABLE_BOTTOM = 3;
     private static void onCenterDraw(TextView view, Canvas canvas, Drawable drawable, int gravity) {
         int drawablePadding = view.getCompoundDrawablePadding();
         int ratio = 1;
