@@ -4,6 +4,6 @@
         <item>可以折叠伸缩的textview</item>
         <item>可以自定义样式的textview</item>
         <item>可以换行对齐的Textview</item>
-        <item>让setDrawableLeft等方法Drawable可以居中和添加点击事件</item>
+        <item>让setDrawableLeft等方法Drawable可以居中</item>
     </array>
 </resources>
